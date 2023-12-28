@@ -7,6 +7,7 @@ const errorHandlerMiddleware = (
   res: Response,
   next: NextFunction
 ) => {
+  // Create the error
   let customError: { statusCode: number; message: string } = {
     statusCode: err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
     message: err.message || "Server error try again later",

@@ -7,13 +7,14 @@ export const authenticateAPI_KEY = (
   _res: Response,
   next: NextFunction
 ): void => {
-  const authHeader = req.headers.authorization;
-  const apiKey = authHeader;
+  // Get the api key
+  const apiKey = req.headers.authorization;
 
   if (!apiKey) {
     throw new UnauthenticatedError("Unauthorized - API key is missing");
   }
 
+  // Get the valid one
   const validApiKey = process.env.VALID_API_KEY;
 
   if (apiKey !== validApiKey) {

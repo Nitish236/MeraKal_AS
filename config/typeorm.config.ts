@@ -4,7 +4,6 @@ dotenv.config();
 import { Task } from "./../entity/task";
 import { DataSourceOptions } from "typeorm";
 
-console.log(process.env.NODE_ENV);
 const databaseConfig: DataSourceOptions = {
   type: "postgres",
   host: process.env.DB_HOST || "localhost",
@@ -17,7 +16,7 @@ const databaseConfig: DataSourceOptions = {
   logging: false, // Enable logging to see database queries
 };
 
-if (process.env.NODE_ENV !== "development") {
+if (process.env.NODE_ENV === "production") {
   Object.assign(databaseConfig, { ssl: true, synchronize: false });
 }
 

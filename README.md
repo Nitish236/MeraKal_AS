@@ -120,7 +120,31 @@ http://localhost:3000
 
 6. To stop the server just `ctrl + c` in your terminal.
 
+## Usage Intsructions
+
+1. Endpoint
+
+   - `/` - To create a Task
+     Method : POST
+
+2. Endpoint
+
+   - `/auth/login` - To Log in and get the token (username and password is in .env file and mentioned in the Postman)
+     Method : POST
+
+3. Endpoint
+
+   - `/tasks/` - To Get the Tasks (it needs the Token, In postman it is taken care of, when you log in it the token will automatically be stored as a global variable)
+     Method : GET
+
+4. Endpoint
+   - `/tasks/:status` - To Get the tasks based on status (not required any authentication)
+     Method : GET
+
 <!-- Postman -->
+
+<h4>Note :</h4>
+<p>In postman there is a variable live_url that has the hosted service url. It might take sometime because the <strong>render stops the server due to inactivity</strong></p>
 
 ## Postman
 

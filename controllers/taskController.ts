@@ -15,6 +15,7 @@ export const createTask = async (
   req: Request,
   res: Response
 ): Promise<void> => {
+  // Retrieve data
   const { endpoint, delay, method } = req.query as {
     endpoint?: string;
     delay?: string;
@@ -62,6 +63,7 @@ export const createTask = async (
   if (task.delay === 0) {
     await handleTaskExecution(task);
   } else {
+    // For delay in execution
     setTimeout(async () => {
       try {
         await handleTaskExecution(task);
