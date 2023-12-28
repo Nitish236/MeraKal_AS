@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import TaskService from "../services/TaskService";
+import TaskService from "../services/taskService";
 import { Task } from "../entity/task";
 import axios from "axios";
 
