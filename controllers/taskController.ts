@@ -1,7 +1,7 @@
 import { StatusCodes } from "http-status-codes";
 import { Request, Response } from "express";
 
-import TaskService from "../services/TaskService";
+import TaskService from "../services/taskService";
 
 import { handleTaskExecution } from "../utils/taskHandler";
 
