@@ -125,21 +125,21 @@ http://localhost:3000
 1. Endpoint
 
    - `/` - To create a Task
-     Method : POST
+   - Method : POST
 
 2. Endpoint
 
    - `/auth/login` - To Log in and get the token (username and password is in .env file and mentioned in the Postman)
-     Method : POST
+   - Method : POST
 
 3. Endpoint
 
    - `/tasks/` - To Get the Tasks (it needs the Token, In postman it is taken care of, when you log in it the token will automatically be stored as a global variable)
-     Method : GET
+   - Method : GET
 
 4. Endpoint
    - `/tasks/:status` - To Get the tasks based on status (not required any authentication)
-     Method : GET
+   - Method : GET
 
 <!-- Postman -->
 
